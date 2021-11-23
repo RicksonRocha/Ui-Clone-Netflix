@@ -1,5 +1,6 @@
-const URL_BASE =  process.env.REACT_API_URL_BASE
+//const URL_BASE =  process.env.REACT_API_URL_BASE
 //const API_KEY = process.env.REACT_API_API_KEY
+const URL_BASE = 'https://api.themoviedb.org/3'
 const API_KEY = '8baeb8ea8c4052aa94199ce00d0a2515'
 
 const basicFecth = async (endpoint) =>{
@@ -16,7 +17,7 @@ export default {
                 title : "Originais do Netflix",
                 items : await basicFecth(`/discover/tv/?with_network=213&language=pt-BR&api_key=${API_KEY}`)                                    
             },
-            /* {
+            {
                 slug: 'trending',
                 title : "Recomendados para Você",
                 items : await basicFecth(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
@@ -50,7 +51,7 @@ export default {
                 slug: 'documentary',
                 title : "Documentários",
                 items : await basicFecth(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
-            }, */
+            },
         ]
      }
 }

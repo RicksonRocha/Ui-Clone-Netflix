@@ -15,7 +15,7 @@ const App = () => {
       }
     }
     loadAll();
-  })
+  }, [])
   return(
     <>
       <div>Qualquer coisa</div>
