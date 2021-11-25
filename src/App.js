@@ -24,7 +24,7 @@ const App = () => {
         let chosen = originals[0].items.results[randomChosen]
 
         let chosenInfo = await ApiService.getMovieInfo(chosen.id, 'tv')
-        console.log('chosenInfo', chosenInfo)
+        setFeaturedData(chosenInfo)
       } catch (error) {
         console.log('catch:', error)
       }
